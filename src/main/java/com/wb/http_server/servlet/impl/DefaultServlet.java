@@ -44,7 +44,7 @@ public class DefaultServlet implements Servlet {
 
         if (request.getMethod() == RequestMethod.GET){
             //首页
-            if (request.getUrl().equals("/")) {
+            if (request.getUrl().equals("/http_server")||request.getUrl().equals("/http_server/")) {
                 request.setUrl("/http_server/file/index.html");
             }
             request.getRequestDispatcher(request.getUrl()).forward(request, response);
